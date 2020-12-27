@@ -1,47 +1,50 @@
 <html>
-
-<head>
-<meta charset="utf-8">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<link rel="stylesheet" href="assets/css/login.css">
-<script src="assets/js/login.js">
-
-</script>
-</head>
-<body>
-<div class="form-collection">
-    <div class="card elevation-3 limit-width log-in-card below turned">
-      <div class="card-body">
-        <div class="input-group email">
-          <input type="text" placeholder="Email"/>
+  <head>
+    <title>Atmanirbhar</title>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <script src="assets/js/login.js"></script>
+  </head>
+  <body>
+    <div class="form-collection">
+      <div class="card elevation-3 limit-width log-in-card below turned">
+        <div class="card-body">
+          <div class="input-group email">
+            <input type="text" placeholder="Email" id="loginemail" />
+          </div>
+          <div class="input-group password">
+            <input type="password" placeholder="Password" id="loginpass"/>
+          </div>
+          <a href="#" class="box-btn">Forgot Password?</a>
         </div>
-        <div class="input-group password">
-          <input type="password" placeholder="Password"/>
+        <div class="card-footer">
+          <button type="submit" class="login-btn" id="loginbtn">Log in</button>
         </div>
-        <a href="#" class="box-btn">Forgot Password?</a>
       </div>
-      <div class="card-footer">
-        <button type="submit" class="login-btn">Log in</button>
+
+      <div class="card elevation-2 limit-width sign-up-card above">
+        <div class="card-body">
+          <div class="input-group fullname">
+            <input type="text" placeholder="Full Name" id="name"/>
+          </div>
+          <div class="input-group email">
+            <input type="email" placeholder="Email" id="signemail"/>
+          </div>
+          <div class="input-group password">
+            <input type="password" placeholder="Password" id="signpass" />
+          </div>
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="signup-btn" id="signupbtn">Sign Up</button>
+        </div>
       </div>
     </div>
 
-    <div class="card elevation-2 limit-width sign-up-card above">
-      <div class="card-body">
-        <div class="input-group fullname">
-          <input type="text" placeholder="Full Name"/>
-        </div>
-        <div class="input-group email">
-          <input type="email" placeholder="Email"/>
-        </div>
-        <div class="input-group password">
-          <input type="password" placeholder="Password"/>
-        </div>
-      </div>
-      <div class="card-footer">
-        <button type="submit" class="signup-btn">Sign Up</button>
-      </div>
-    </div>
-  </div>
-  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="assets/js/login.js"></script>
   </body>
-  </html>
+</html>
