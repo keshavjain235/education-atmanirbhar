@@ -19,7 +19,7 @@ var reply = [
 	["Nothing much", "About to go to sleep", "Can you guest?", "I don't know actually"],
 	["We will try to connect you soon"],
 	["I am just a bot", "I am a bot. What are you?"],
-	["Team Atamnirbhar", "My God"],
+	["Team Atmanirbhar", "My God"],
 	["I am nameless", "I don't have a name"],
 	["We'll get you a help soon", "We'll get you a help soon","We'll get you a help soon"],
 	["You will be shifted to doubt room soon", "You will connect you to doubt room soon","teacher will get to you soon"],
