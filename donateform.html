@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital@1&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="assets/css/donateform.css">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/donateform.css">
     <title>Donation Form</title>
-	
-</head>
-<body>
-  <div class="parent" id="p">
-    <h1>Donation Form</h1>
-    <form action="#">
-      <label for="fname"> Name:</label>
-      <input type="text" id="fname" name="fname" value="John Doe">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" value="john@gamil.com">
-      <label for="number">Phone No.:</label>
-      <input type="number" id="number" name="number" value="987xxxxxxxx">
-      
-      <label for="gender">Gender</label>
-        <select id="gender" name="gender">
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-        </select>
-        <input type="submit" value="Pay">
-		
-    </form> 
-	<a href="index.html"><input type="submit" value="Take Back"></a>
-  </div>
-</body>
+  </head>
+  
+  <body>
+    <div class="parent" id="p">
+      <h1>Donation Form</h1>
+      <form id="paydet">
+        <label for="fname"> Name:</label>
+        <input type="text" id="payname" placeholder="John Doe">
+        <label for="email">Email:</label>
+        <input type="email" id="payemail" placeholder="john@gamil.com">
+        <label for="number">Phone No.:</label>
+        <input type="number" id="paynum" placeholder="987xxxxxxxx">
+        <label for="amount">Donation Amount:</label>
+        <input type="number" id="payamount" placeholder="Enter donation amount in INR">
+
+        <br>
+        <button class="btn btn-primary" id="paysub">Proceed</button>
+        <br>
+        <a href="index.html" class="btn btn-block btn-warning">Home</a>
+      </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="assets/js/donate.js"></script>
+  </body>
 </html>
