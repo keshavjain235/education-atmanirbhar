@@ -40,18 +40,18 @@ $(document).ready(function(){
     var pass = $("#loginpass").val();
     if(ValidateEmail(email)) {}
     else {
-        firebase.auth().signInWithEmailAndPassword(email, pass).catch(function(error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // ...
-            if (errorCode === "auth/user-not-found") {
-                alert("Invalid Email and/or Password!");
-            }
-            else {
-              alert(errorCode + " " + errorMessage);
-            }
-        });
+      firebase.auth().signInWithEmailAndPassword(email, pass).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+        if (errorCode === "auth/user-not-found") {
+            alert("Invalid Email and/or Password!");
+        }
+        else {
+          alert(errorCode + " " + errorMessage);
+        }
+      });
     }
   });
 
@@ -70,7 +70,6 @@ $(document).ready(function(){
         // Signed in 
         // ...
         console.log("signed up");
-        alert("signed up");
         return result.user.updateProfile({
           displayName: name
         });
@@ -88,7 +87,7 @@ $(document).ready(function(){
       if (user) {
         // User is signed in.
         console.log("Signed in");
-        alert("signed in");
+        window.location.href= "https://blog.feedspot.com/indian_education_blogs";
         // window.open("adminindex.html","_self");
       } else {
         // User is signed out.
@@ -104,7 +103,7 @@ $(document).ready(function(){
       return(true);
     }
 
-    //remove when complete
+    //remove below code when complete
     firebase.auth().signOut().then(function() {
       // Sign-out successful.
     }).catch(function(error) {
