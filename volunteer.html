@@ -2,104 +2,111 @@
 <html>
   <head>
     <title>Atmanirbhar</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/volunteer.css">
   </head>
   <body>
     
-    <div class="testbox">
-      <form action="/">
+    <div class="testbox" style="width: 100%; overflow: hidden;">
+      <form>
         <div class="banner">
           <h1>Volunteer Signup</h1>
         </div>
         <br/>
         <p>The HELP Group is seeking volunteers to serve our community. Fill in the information below to indicate how you would like to become involved.</p>
         <br/>
-        <div class="colums">
+        <div class="colums" style="padding-left: 20px;">
           <div class="item">
             <label for="name">Name<span>*</span></label>
-            <input id="name" type="text" name="name" required/>
+            <input id="name" type="text" name="name" />
           </div>
           <div class="item">
             <label for="eaddress">Email Address<span>*</span></label>
-            <input id="eaddress" type="text"   name="eaddress" required/>
+            <input id="eaddress" type="email" name="eaddress" />
           </div>
           <div class="item">
             <label for="phone">Phone<span>*</span></label>
-            <input id="phone" type="tel"   name="phone" required/>
+            <input id="phone" type="tel" name="phone" />
           </div>
           <div class="item">
             <label for="street">Street<span>*</span></label>
-            <input id="street" type="text"   name="street" required/>
+            <input id="street" type="text" name="street" />
           </div>
           <div class="item">
             <label for="city">City<span>*</span></label>
-            <input id="city" type="text"   name="city" required/>
+            <input id="city" type="text" name="city" />
           </div>
           <div class="item">
             <label for="state">State<span>*</span></label>
-            <input id="state" type="text"   name="state" required/>
+            <input id="state" type="text" name="state" />
           </div>
           <div class="item">
             <label for="zip">Zip<span>*</span></label>
-            <input id="zip" type="text"   name="zip" required/>
+            <input id="zip" type="number" name="zip"  min="100000" max="999999" />
           </div>
         </div>
         
-        <div class="item">
-          <p>Teaching Hours Preference</p>
-          <select>
-            <option selected value="" disabled selected></option>
-            <option value="b" >1</option>
-            <option value="ch">2</option>
-            <option value="v">3</option>   
-          </select>
-        </div>
-        
-        <div class="week">
+        <br/><br/>
+
+        <div class="week" style="float: left; width: 49%; padding-left: 20px;">
           <div class="question">
             <label>Days Attending </label>
             <div class="question-answer">
               <div>
-                <input type="radio" value="none" id="radio_3" name="day"/>
+                <input type="radio" value="Sunday" id="radio_3" name="day" checked="checked" />
                 <label for="radio_3" class="radio"><span>Sunday</span></label>
               </div>
               <div>
-                <input  type="radio" value="none" id="radio_4" name="day"/>
+                <input  type="radio" value="Monday" id="radio_4" name="day"/>
                 <label for="radio_4" class="radio"><span>Monday</span></label>
               </div>
               <div>
-                <input  type="radio" value="none" id="radio_5" name="day"/>
+                <input  type="radio" value="Tuesday" id="radio_5" name="day"/>
                 <label for="radio_5" class="radio"><span>Tuesday</span></label>
               </div>
               <div>
-                <input  type="radio" value="none" id="radio_6" name="day"/>
+                <input  type="radio" value="Wednesday" id="radio_6" name="day"/>
                 <label for="radio_6" class="radio"><span>Wednesday</span></label>
               </div>
               <div>
-                <input  type="radio" value="none" id="radio_7" name="day"/>
+                <input  type="radio" value="Thursday" id="radio_7" name="day"/>
                 <label for="radio_7" class="radio"><span>Thursday</span></label>
               </div>
               <div>
-                <input  type="radio" value="none" id="radio_8" name="day"/>
+                <input  type="radio" value="Friday" id="radio_8" name="day"/>
                 <label for="radio_8" class="radio"><span>Friday</span></label>
               </div>
               <div>
-                <input  type="radio" value="none" id="radio_9" name="day"/>
+                <input  type="radio" value="Saturday" id="radio_9" name="day"/>
                 <label for="radio_9" class="radio"><span>Saturday</span></label>
               </div>
             </div>
           </div>  
         </div>
+
+        <div class="item" style="width: 49%; float: right;">
+          <p>Teaching Hours Preference</p>
+          <select id="teachhrs" style="width: 150px; height: 30px;">
+            <option selected value="" disabled selected></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>   
+          </select>
+        </div>
         
-        <div class="btn-block">
-          <button type="submit" href="/">Submit</button>
-		      <a href="index.html">
-            <button type="button">Home</button>
-          </a>
+        <div class="btn-block" style="float: left;">
+          <button class="btn btn-lg btn-success" id="submit">Submit</button>
+		      <a href="index.html" class="btn btn-lg btn-primary" style="width: 150px;">Home</a>
         </div>
       </form>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="assets/js/volunteer.js"></script>
   </body>
 </html>
